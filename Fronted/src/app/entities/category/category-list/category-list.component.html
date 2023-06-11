@@ -1,6 +1,6 @@
 <h1>Lista de categorias</h1>
 
-<table *ngIf="categories.length > 0">
+<table class="table" *ngIf="categories.length > 0">
     <thead>
         <th>Id</th>
         <th>Imagen</th>
@@ -16,11 +16,10 @@
             <td>{{ category.name }}</td>
             <td>
                 <a [routerLink]="['/categories', category.id, 'items']">
-                <button id="btnNavToCategoryItems">Articulos</button>
+                <button id="btnNavToCategoryItems" class="btn btn-primary">Articulos</button>
                 </a>
-                <button id="btnEditCategory">Editar</button>
-                <button id="btnDeleteCategory">Eliminar</button>
-                
+                <button id="btnEditCategory" class="btn btn-primary">Editar</button>
+                <button id="btnDeleteCategory" class="btn btn-danger">Eliminar</button>
             </td>
         </tr>
     </tbody>

@@ -20,12 +20,14 @@
             <button id="btnSearch" class="btn btn-secondary" (click)="searchByFilters();">Buscar</button>
         </div>
 
+        <div id="buttonCreateContainer">
+            <button class="btn btn-secondary" [routerLink]="['/items','new']">Nuevo</button>
+        </div>
+
     </div>
 </form>
 
-<div id="buttonCreateContainer">
-    <button [routerLink]="['/items','new']">Nuevo Artículo</button>
-</div>
+
 
 <table *ngIf="items.length > 0">
     <thead>
@@ -44,9 +46,9 @@
             <td>{{ item.name }}</td>
             <td>{{ item.price }}</td>
             <td>
-                <button id="btnEditCategory" [routerLink]="['/items',item.id]">Editar</button>
-                <button id="btnEditCategory" [routerLink]="['/reactive-items',item.id]">Editar reactivo</button>
-                <button id="btnDeleteCategory" data-bs-toggle="modal" data-bs-target="#askConfirmationDelete" (click)="prepareItemToDelete(item.id!);">Eliminar</button>
+                <button id="btnEditCategory" class="btn btn-primary" [routerLink]="['/items',item.id]">Editar</button>
+                <button id="btnEditCategory" class="btn btn-primary" [routerLink]="['/reactive-items',item.id]">Editar reactivo</button>
+                <button id="btnDeleteCategory" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#askConfirmationDelete" (click)="prepareItemToDelete(item.id!);">Eliminar</button>
                 
             </td>
         </tr>

@@ -1,0 +1,20 @@
+<h2>Login</h2>
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+  <div class="mb-3">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" [formControl]="email" required>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+      <div *ngIf="email.errors?.['required']">El email es obligatorio.</div>
+      <div *ngIf="email.errors?.['email']">El email no es válido.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" name="password" [formControl]="password" required>
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+      <div *ngIf="password.errors?.['required']">La contraseña es obligatoria.</div>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <button class="btn btn-primary" type="submit">Login</button>
+</form>

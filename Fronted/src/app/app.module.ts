@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthService } from './auth.service';
+  // Asegúrate de que la ruta de importación es correcta
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,8 @@ import { HttpRequestIntercept } from './config/interceptors/http-request-interce
 
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ItemReactiveFormComponent } from './entities/item/item-reactive-form/item-reactive-form.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { ItemReactiveFormComponent } from './entities/item/item-reactive-form/it
     CategoryFormComponent,
     ItemListComponent,
     ItemFormComponent,
-    ItemReactiveFormComponent
+    ItemReactiveFormComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,14 @@ import { ItemReactiveFormComponent } from './entities/item/item-reactive-form/it
       provide: HTTP_INTERCEPTORS,
       useClass: HttpRequestIntercept,
       multi: true
+    },    
+    AuthService, // Añade esto
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestIntercept,
+      multi: true
     }
+
   ],
   bootstrap: [AppComponent]
 })
