@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-    // Asume que tienes un servidor Spring ejecutándose en el localhost en el puerto 8080
+
     private apiUrl = 'http://localhost:8080';
 
     constructor(private http: HttpClient) { }

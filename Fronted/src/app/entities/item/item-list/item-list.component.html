@@ -44,7 +44,7 @@
                 <img class="imgItem" [src]="'data:image/jpeg;base64,' + item.image">
             </td>
             <td>{{ item.name }}</td>
-            <td>{{ item.price }}</td>
+            <td>{{ item.price | currency:'EUR' }}</td>
             <td>
                 <button id="btnEditCategory" class="btn btn-primary" [routerLink]="['/items',item.id]">Editar</button>
                 <button id="btnEditCategory" class="btn btn-primary" [routerLink]="['/reactive-items',item.id]">Editar reactivo</button>

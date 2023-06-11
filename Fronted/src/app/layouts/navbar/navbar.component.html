@@ -16,13 +16,16 @@
                 <a class="nav-link" aria-current="page" [routerLink]="['items']">Artículos</a>
             </li>
 
-            <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
-            <button *ngIf="!isLoggedIn()" (click)="login()">Login</button>
-            <button *ngIf="!isLoggedIn()" (click)="register()">Register</button>
+            <button id="log" class="btn btn-light" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+            <button id="log" class="btn btn-light" *ngIf="!isLoggedIn()" (click)="login()">Login</button>
+            <button id="log" class="btn btn-light" *ngIf="!isLoggedIn()" (click)="register()">Register</button>
+
+
 
         </div>
-      </div>
-      <h5 *ngIf="isLoggedIn()" [ngStyle]="getHeaderStyles()">{{ welcomeMessage }}</h5>
 
+        <h5 *ngIf="isLoggedIn()" [ngStyle]="getHeaderStyles()">{{ welcomeMessage }}</h5>
+
+      </div>
     </div>
   </nav>

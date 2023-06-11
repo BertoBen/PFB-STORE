@@ -16,8 +16,6 @@ export class HomeComponent implements OnInit {
 
     if (username) {
       this.welcomeMessage = 'Bienvenido al Store ' + username;
-      // Elimina el indicador de inicio de sesión para que el mensaje de bienvenida no se muestre nuevamente al actualizar la página
-      //localStorage.removeItem('username');
     }
   }
 
@@ -26,12 +24,12 @@ export class HomeComponent implements OnInit {
   }
 
   login(): void {
-    // Implementa la lógica de redirección al formulario de inicio de sesión
+    // Redirección al formulario de inicio de sesión
     this.router.navigate(['/login']);
   }
 
   register(): void {
-    // Implementa la lógica de redirección al formulario de inicio de sesión
+    // Redirección al formulario de inicio de sesión
     this.router.navigate(['/register']);
   }
 

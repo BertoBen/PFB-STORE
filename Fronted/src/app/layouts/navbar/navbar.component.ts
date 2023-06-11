@@ -16,9 +16,7 @@ export class NavbarComponent implements OnInit {
     const username = localStorage.getItem('user');
 
     if (username) {
-      this.welcomeMessage = 'Hola ' + username;
-      // Elimina el indicador de inicio de sesión para que el mensaje de bienvenida no se muestre nuevamente al actualizar la página
-      //localStorage.removeItem('username');
+      this.welcomeMessage = username;
     }
 
   }
@@ -35,12 +33,12 @@ export class NavbarComponent implements OnInit {
   }
 
   login(): void {
-    // Implementa la lógica de redirección al formulario de inicio de sesión
+    // Redirección al formulario de inicio de sesión
     this.router.navigate(['/login']);
   }
 
   register(): void {
-    // Implementa la lógica de redirección al formulario de inicio de sesión
+    // Redirección al formulario de inicio de sesión
     this.router.navigate(['/register']);
   }
 

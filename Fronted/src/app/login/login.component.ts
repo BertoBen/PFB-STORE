@@ -46,7 +46,7 @@ export class LoginComponent {
       error => {
         console.error('Error al iniciar sesión', error);
         if (error.status === 401) {
-          this.errorMessage = 'Credenciales inválidas';
+          this.errorMessage = 'El usuario o la contraseña son erróneos';
         } else {
           this.errorMessage = 'Ocurrió un error al iniciar sesión';
         }

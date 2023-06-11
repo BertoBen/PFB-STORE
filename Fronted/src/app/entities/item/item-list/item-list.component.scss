@@ -68,11 +68,14 @@ div #botonBuscar {
     padding-top: 14px;
 }
 
-.botonBuscar {
-    width: 110px;
+#botonBuscar {
+    box-sizing: content-box;
+    width: 80px;
 
 }
 
-.buttonCreateContainer {
-    width: 120px;
+#buttonCreateContainer {
+    width: 80px;
+    padding: 14px 0px 0;
+    margin-left: 0;
 }
