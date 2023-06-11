@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+.imgItem {
+    width: 90px;
+}
+
+table {
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+thead {
+    background-color: black;
+    color: white;
+
+}
+
+.botoneraPaginacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoneraPaginacion button {
+    margin: 15px;
+}
+
+tbody button {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+form {
+
+    background-color: rgb(243, 238, 238);
+    border-radius: 10px;
+    width: 1400px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+}
+
+label {
+    display:block;
+}
+
+
+.col-md-3 {
+    width: 20%;
+}
+
+.row div {
+    margin: 20px;
+}
+
+.col-md-6 input {
+    width: 100%;
+}
+
+div #botonBuscar {
+    padding-top: 14px;
+}
+
+#botonBuscar {
+    box-sizing: content-box;
+    width: 80px;
+
+}
+
+#buttonCreateContainer {
+    width: 80px;
+    padding: 14px 0px 0;
+    margin-left: 0;
+}

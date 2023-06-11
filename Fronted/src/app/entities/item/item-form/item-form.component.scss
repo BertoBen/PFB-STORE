@@ -1,0 +1,24 @@
+form {
+    margin: 25px;
+
+    .form-group {
+        margin-top: 25px;
+    }
+
+    label {
+        display: block;
+    }
+
+    .ng-valid[required], .ng-valid.required {
+        border-left: 5px solid rgb(43, 153, 43);
+    }
+
+    .ng-invalid:not(form) {
+        border-left: 5px solid rgb(219, 39, 39);
+    }
+}
+
+img {
+    width: 200px;
+    margin-bottom: 20px;
+}
